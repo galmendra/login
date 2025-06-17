@@ -1,7 +1,7 @@
 ﻿// Este modelo representa la estructura de la tabla users en Supabase
 using System.ComponentModel.DataAnnotations;
 
-namespace login1.Models  // 🔄 Cambia "tu_proyecto" por el nombre real de tu proyecto
+namespace login.Models  // 🔄 Cambia "tu_proyecto" por el nombre real de tu proyecto
 {
     public class UserModel
     {

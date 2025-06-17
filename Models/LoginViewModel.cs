@@ -1,7 +1,7 @@
 ﻿// Este modelo representa los datos que el usuario ingresará en el formulario
 using System.ComponentModel.DataAnnotations;
 
-namespace login1.Models
+namespace login.Models
 {
     public class LoginViewModel
     {

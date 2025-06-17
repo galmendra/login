@@ -1,0 +1,65 @@
+﻿```html
+@model login.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Iniciar Sesión</h3>
+                </div>
+                <div class="card-body">
+
+                    @* Mostrar mensaje de error si existe *@
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                    <div class="alert alert-danger" role="alert">
+                        @Model.ErrorMessage
+                    </div>
+                    }
+
+                    @* Formulario de login *@
+                    <form asp-action="Login" method="post">
+                        @* Token anti-falsificación *@
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            @* Campo Username *@
+                            <label asp-for="Username" class="form-label">Nombre de Usuario</label>
+                            <input asp-for="Username" class="form-control" placeholder="Ingresa tu nombre de usuario" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            @* Campo Password *@
+                            <label asp-for="Password" class="form-label">Contraseña</label>
+                            <input asp-for="Password" class="form-control" placeholder="Ingresa tu contraseña" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            @* Botón de envío *@
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        </div>
+                    </form>
+
+                    @* Enlaces adicionales *@
+                    <div class="text-center mt-3">
+                        <a asp-controller="Home" asp-action="Index" class="text-decoration-none">
+                            ← Volver al inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Scripts para validación del lado del cliente *@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

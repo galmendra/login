@@ -1,4 +1,4 @@
-namespace login1.Models
+namespace login.Models
 {
     public class ErrorViewModel
     {

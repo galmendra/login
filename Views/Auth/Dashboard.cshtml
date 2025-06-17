@@ -1,0 +1,38 @@
+﻿```html
+@{
+    ViewData["Title"] = "Panel de Usuario";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3 class="text-center mb-0">✅ Login Exitoso</h3>
+                </div>
+                <div class="card-body text-center">
+
+                    @* Mensaje de bienvenida *@
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">@ViewBag.WelcomeMessage</h4>
+                        <p>Has iniciado sesión correctamente en el sistema.</p>
+                    </div>
+
+                    @* Información del usuario *@
+                    <div class="mb-4">
+                        <h5>Información de la Sesión:</h5>
+                        <p><strong>Usuario:</strong> @ViewBag.Username</p>
+                        <p><strong>Fecha y Hora:</strong> @DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")</p>
+                    </div>
+
+                    @* Acciones disponibles *@
+                    <div class="d-flex justify-content-center gap-3">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+                            🏠 Ir al Inicio
+                        </a>
+                        <a asp-action="Logout" class="btn btn-outline-secondary">
+                            🚪 Cerrar Sesión
+                        </a>
+                    </div>
+                </div>
+            </div>

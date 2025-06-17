@@ -1,12 +1,11 @@
 ﻿
 // Controlador que maneja las acciones relacionadas con autenticación
 // Usa el mismo patrón que HomeController para conectar con Supabase
-using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-using login1.Models;
-using BCrypt.Net;
+using login.Models;
+using Microsoft.AspNetCore.Mvc;
 namespace login1.Controllers
-{ 
+{
     public class AuthController : Controller
     {
         // Variables privadas (igual que en HomeController)
@@ -32,7 +31,7 @@ namespace login1.Controllers
         // GET: /Auth/Login
         // Muestra el formulario de login
         [HttpGet]
-        public IActionResult Login1()
+        public IActionResult Login()
         {
             // Crear un modelo vacío para el formulario
             var model = new LoginViewModel();
@@ -43,7 +42,7 @@ namespace login1.Controllers
         // Procesa el formulario de login enviado
         [HttpPost]
         [ValidateAntiForgeryToken]  // Protección contra ataques CSRF
-        public async Task<IActionResult> login1(LoginViewModel model)
+        public async Task<IActionResult> login(LoginViewModel model)
         {
             // Verificar si el modelo es válido (validaciones de DataAnnotations)
             if (!ModelState.IsValid)

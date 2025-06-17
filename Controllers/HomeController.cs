@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using login1.Models;
+using login.Models;
 using Microsoft.AspNetCore.Mvc;
  
-namespace login1.Controllers
+namespace login.Controllers
 {
     public class HomeController : Controller
     {
