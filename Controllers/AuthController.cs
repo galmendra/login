@@ -6,7 +6,7 @@ using System.Text.Json;
 using login1.Models;
 using BCrypt.Net;
 namespace login1.Controllers
-{
+{ 
     public class AuthController : Controller
     {
         // Variables privadas (igual que en HomeController)

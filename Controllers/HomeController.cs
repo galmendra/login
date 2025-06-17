@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using login1.Models;
 using Microsoft.AspNetCore.Mvc;
-
+ 
 namespace login1.Controllers
 {
     public class HomeController : Controller
