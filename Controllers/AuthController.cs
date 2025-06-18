@@ -128,6 +128,8 @@ namespace login1.Controllers
 
                 // 3. Verificar la contraseña usando BCrypt
                 // BCrypt.Verify compara la contraseña en texto plano con el hash guardado
+                // para encriptar el password,
+                //var pass = BCrypt.Net.BCrypt.HashPassword(model.Password);
                 bool isPasswordValid = BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash);
 
 
