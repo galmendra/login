@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YQRNpCkl5CQ=",
+  "dgSpecHash": "LsiLi/bSPVA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\source\\repos\\login1\\login1.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\source\\repos\\galmendra\\login\\login.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

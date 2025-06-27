@@ -4,7 +4,7 @@
 using System.Text.Json;
 using login.Models;
 using Microsoft.AspNetCore.Mvc;
-namespace login1.Controllers
+namespace login.Controllers
 {
     public class AuthController : Controller
     {
